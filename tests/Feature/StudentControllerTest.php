@@ -3,13 +3,14 @@
 namespace Tests\Feature;
 
 use App\Model\Student;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithFaker;
 use Laravel\Passport\Passport;
 use Tests\TestCase;
 
 class StudentControllerTest extends TestCase
 {
-    use WithFaker;
+    use WithFaker, DatabaseTransactions;
 
     protected $student;
 
